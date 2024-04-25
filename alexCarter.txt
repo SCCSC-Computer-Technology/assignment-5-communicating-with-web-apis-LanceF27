@@ -1,0 +1,5 @@
+Good use of dependency injection to inject the StudentProfileContext into the controller. The controller uses an in-memory list apiCache to store student profiles. 
+This might be suitable for testing or small-scale applications,but it's not suitable for production applications where you would typically use a database.
+The GetStudentProfiles method returns all student profiles. It directly returns the apiCache. It's efficient for this in-memory scenario, but in a real-world scenario,
+it would typically retrieve data from a database. Database interaction is done using Entity Framework Core, which provides a convenient way to interact with databases in 
+ASP.NET Core applications.
